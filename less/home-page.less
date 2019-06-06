@@ -1,13 +1,14 @@
 .home {
 
+  @media @tablet-large {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
   .content-welcome {
 
     border-bottom: 2px dashed @navigation-border;
     padding-bottom: 1rem;
-
-    @media @mobile {
-      // width: 100%;
-    }
 
     h1 {
       padding-top: 2rem;
@@ -24,26 +25,44 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-    @media @mobile {
-      flex-direction: column;
-    }
+      @media @mobile {
+        flex-direction: column;
+      }
 
     .text-content {
       width: 48%;
       padding-right: 1%;
 
-      @media @mobile {
-        width: 100%;
-      }
+      @media @tablet-large {
+        width: 50%;
+        padding: 0;
+
+        @media @tablet-small {
+          padding-right: 1%;
+
+          @media @mobile {
+            width: 100%;
+          }
+        }
+      }  
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
 
-      @media @mobile {
-        width: 100%;
-      }
+      @media @tablet-large {
+        width: 50%;
+        padding: 0;
+
+        @media @tablet-small {
+          padding-left: 1%;
+          
+          @media @mobile {
+            width: 100%;
+          }
+        }
+      }  
 
       img {
         border-radius: 10px;
@@ -62,11 +81,37 @@
     .text-content {
       padding-left: 1%;
       padding-right: 0;
+
+      @media @tablet-large {
+        width: 50%;
+        padding: 0;
+
+        @media @tablet-small {
+          padding-left: 1%;
+          
+          @media @mobile {
+            width: 100%;
+          }
+        }
+      } 
     }
 
     .img-content {
       padding-right: 1%;
       padding-left: 0;
+
+      @media @tablet-large {
+        width: 50%;
+        padding: 0px;
+
+        @media @tablet-small {
+          padding-right: 1%;
+          
+          @media @mobile {
+            width: 100%;
+          }
+        }
+      }  
     }
   }
 
@@ -74,12 +119,20 @@
     width: 75%;
     margin: 0 auto 30px;
 
-    @media @mobile {
+    @media @tablet-large {
       width: 100%;
     }
 
     img {
       border-radius: 10px;
+
+      @media @tablet-large {
+        width: 100%;
+
+        @media @mobile {
+          width: 100%;
+        }
+      }
     }
   }
 
