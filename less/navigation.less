@@ -9,12 +9,17 @@ header {
     padding-top: 2rem;
     padding-bottom: 2rem;
 
-    @media @mobile {
-        background: red;
+    @media @mobile{
+        flex-direction: column;
+        padding-bottom: 0;
     }
 
     h1 {
-        width: 100%
+        width: 100%;
+
+        @media @mobile {
+            text-align: center;
+        }
     }
 
     nav {
@@ -22,11 +27,19 @@ header {
         display: flex;
         justify-content: flex-end;
 
+        @media @mobile {
+            justify-content: space-evenly;
+        }
+
         a {
             margin-left: 5rem;
             font-size: 1.5rem;
             text-decoration: none;
-            color: black; 
+            color: black;
+
+            @media @mobile {
+                margin-left: 0;
+            }
         }
     }
 }
