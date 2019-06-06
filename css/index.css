@@ -259,6 +259,35 @@ header nav a {
     margin-left: 0;
   }
 }
+header nav a:hover {
+  -webkit-animation: fade-in 0.5s linear infinite alternate;
+  -moz-animation: fade-in 0.5s linear infinite alternate;
+  animation: fade-in 0.5s linear infinite alternate;
+}
+@-moz-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 hr {
   padding-top: 0.4rem;
   border-bottom: 2px dashed #C0C0C0;
@@ -458,4 +487,10 @@ hr {
     width: 100%;
     background: #00A4B8;
   }
+}
+.home .content-pick form {
+  padding-top: 1rem;
+}
+.home .content-pick form input {
+  margin: 1rem;
 }
