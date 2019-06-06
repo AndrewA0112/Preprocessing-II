@@ -175,14 +175,19 @@ header {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 0.5rem;
-  border-bottom: 2px dashed #C0C0C0;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+@media (max-width: 500px) {
+  header {
+    background: red;
+  }
 }
 header h1 {
-  width: 50%;
+  width: 100%;
 }
 header nav {
-  width: 50%;
+  width: 100%;
   display: flex;
   justify-content: flex-end;
 }
@@ -191,6 +196,15 @@ header nav a {
   font-size: 1.5rem;
   text-decoration: none;
   color: black;
+}
+hr {
+  padding-top: 0.4rem;
+  border-bottom: 2px dashed #C0C0C0;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  width: 100%;
+  margin-bottom: 0;
 }
 .footer {
   width: 100%;

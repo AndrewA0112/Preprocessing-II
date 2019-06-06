@@ -6,15 +6,19 @@ header {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 0.5rem;
-    border-bottom: 2px dashed @navigation-border;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    @media @mobile {
+        background: red;
+    }
 
     h1 {
-        width: 50%
+        width: 100%
     }
 
     nav {
-        width: 50%;
+        width: 100%;
         display: flex;
         justify-content: flex-end;
 
@@ -25,4 +29,11 @@ header {
             color: black; 
         }
     }
+}
+
+hr {
+    padding-top: 0.4rem;
+    .headerLine(2px dashed @navigation-border,none,none,none);
+    width: 100%;
+    margin-bottom: 0;
 }
