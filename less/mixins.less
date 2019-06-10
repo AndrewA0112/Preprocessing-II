@@ -1,1 +1,25 @@
 // Mixins in here
+
+.buttonMixin (@color, @background){
+    width: 85%;
+    background: @background;
+    border-radius: 10px;
+    color: @color;
+    text-align: center;
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.headerLine (@bottom,@top,@left,@right){
+    border-bottom: @bottom;
+    border-top: @top;
+    border-left: @left;
+    border-right: @right;
+}
+
+//Animation
+.animation(@arguments) {
+	-webkit-animation: @arguments;
+	-moz-animation: @arguments;
+	animation: @arguments;
+}

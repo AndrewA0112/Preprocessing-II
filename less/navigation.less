@@ -1,1 +1,88 @@
 // Navigation Styles here
+header {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    @media @tablet-small {
+        max-width: 650px;
+
+        @media @mobile{
+            flex-direction: column;
+            padding-bottom: 0;
+        }
+    }
+
+    h1 {
+        width: 100%;
+
+        @media @tablet-large {
+            width: 30%;
+
+            @media @tablet-small {
+
+                @media @mobile {
+                    width:100%;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+
+        @media @tablet-large {
+            justify-content: space-between;
+
+            @media @tablet-small {
+                justify-content: space-evenly;
+
+                @media @mobile {
+                    justify-content: space-evenly;
+                }
+            }
+        }
+
+        a {
+            margin-left: 5rem;
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: black;
+
+            @media @tablet-large {
+                font-size: 2rem;
+
+                @media @tablet-small {
+
+                    @media @mobile {
+                        margin-left: 0;
+                    }
+                }
+            }
+
+            &:hover {
+                .keyframes(fade-in;{
+                    0% { opacity: 0; }
+                    100% { opacity: 1; }
+                    });
+            
+                .animation(fade-in 0.5s linear infinite alternate);
+            }
+        }
+    }
+}
+
+hr {
+    padding-top: 0.4rem;
+    .headerLine(2px dashed @navigation-border,none,none,none);
+    width: 100%;
+    margin-bottom: 0;
+}
